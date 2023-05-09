@@ -1,0 +1,9 @@
+name: 42-c-project-template
+description: Template for the basic of a project (Makefile, the project main file and its header)
+types:
+  - app-template
+inputs:
+  - label: Project name
+    type: text
+    name: project_name
+    default: project-name

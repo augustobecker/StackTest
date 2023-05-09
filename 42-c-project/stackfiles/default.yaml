@@ -1,0 +1,9 @@
+type: app
+description: "The Basics for a C Project: a Makefile to compile the code and Norminette installed."
+# template used to create the project
+template: 42-C-project/42-c-project-template
+inputs:
+  some_input: value
+# list of plugins to be applied after project creation
+plugins:
+  - plugin: 42-C-project/Norminette
