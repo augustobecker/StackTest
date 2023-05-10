@@ -1,0 +1,43 @@
+name: mlx-plugin
+description: plugin to install mlx 
+display-name: mlx-plugin
+picture: plugin.png
+category: backend # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/plugin/#category
+compatibility:
+  - java
+  - spring
+about: docs/about.md
+usage: docs/usage.md
+use-case: docs/use-case.md
+implementation: docs/implementation.md
+technologies: # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/yaml/#technologies
+  - "Api"
+types:
+  - app
+inputs:
+  - label: Intra login
+    type: text
+    name: login
+
+hooks:
+  - type: run
+    trigger: before-render
+    commands:
+      # - wget https://cdn.intra.42.fr/document/document/14588/minilibx-linux.tgz
+      # - tar -xvf minilibx-linux.tgz
+      - echo "Compiling files..."
+      # - make -C ./minilibx-linux/
+      - echo "Installing lib..."
+      # - sudo cp ./minilibx-linux/libmlx.a /usr/local/lib/
+      - echo "Installing includes..."
+      # - sudo cp ./minilibx-linux/mlx.h /usr/local/include/
+      - echo Done!
+  - type: edit
+    trigger: after-render
+    path: ./Makefile
+    changes:
+      - insert:
+          line: 6
+          value: "MLX_FLAGS = -lmlx -lXext -lX11\n\n"
+          when:
+            not-exists: "MLX_FLAGS= -lmlx -lXext -lX11\n\n"
