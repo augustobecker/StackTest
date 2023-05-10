@@ -1,10 +1,11 @@
-description: Create C projects for école 42, choose between its types (Graphic Project, Libft Permitted or Normal) add some tools (norminette) and streamline code development.
-name: 42-C-project
-display-name: 42-C-project
+description: Stack to make a cadet's life easier :)
+name: 42-c-projects
+display-name: 42-c-projects
 picture: stack.png
 category: backend # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/plugin/#category
 compatibility: # Put a list of technologies compatible with the stack
-  - C
+  - java
+  - spring
 technologies: # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/yaml/#technologies 
   - docker 
 about: docs/about.md

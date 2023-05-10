@@ -1,0 +1,25 @@
+{
+  "stack_name": "42-c-projects",
+  "stack_type": "local",
+  "stack_path": "C:\\Users\\user\\Desktop\\42-c-projects",
+  "stack_remote": [],
+  "plugins": {
+    "42-c-project-template": {
+      "description": "Template for the basic of a project (Makefile, the project main file and its header)",
+      "types": [
+        "app-template"
+      ],
+      "path": "C:\\Users\\user\\.stk\\stacks\\42-c-projects\\42-c-project-template",
+      "latest_version": "Sem release"
+    },
+    "mlx-plugin": {
+      "description": "plugin to install mlx",
+      "types": [
+        "app"
+      ],
+      "path": "C:\\Users\\user\\.stk\\stacks\\42-c-projects\\mlx-plugin",
+      "latest_version": "Sem release"
+    }
+  },
+  "tasks": {}
+}

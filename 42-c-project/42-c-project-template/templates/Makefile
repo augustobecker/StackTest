@@ -1,4 +1,4 @@
-NAME		= {{ inputs.project_name | lower }}
+NAME		= {{ project_name | lower }}
 
 CC 			= clang
 

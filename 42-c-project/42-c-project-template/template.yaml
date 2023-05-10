@@ -7,3 +7,4 @@ inputs:
     type: text
     name: project_name
     default: project-name
+    global: true
