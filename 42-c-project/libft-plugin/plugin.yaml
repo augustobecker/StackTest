@@ -1,0 +1,38 @@
+name: libft-plugin
+description: install and integrate libft to the project
+display-name: libft-plugin
+picture: plugin.png
+category: backend # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/plugin/#category
+compatibility:
+  - C
+about: docs/about.md
+usage: docs/usage.md
+use-case: docs/use-case.md
+implementation: docs/implementation.md
+technologies: # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/yaml/#technologies
+  - "Api"
+types:
+  - app
+inputs:
+  - label: URL to your libft
+    type: text
+    name: libft
+  # - label: Project Name
+  #   type: text
+  #   name: project_name
+
+hooks:
+  - type: run
+    trigger: before-render
+    commands:
+      - git clone {{libft}} includes/libft
+      - echo "libft added with success!"
+  - type: edit
+    trigger: after-render
+    path: ./includes/{{project_name}}.h
+    changes:
+      - insert:
+          line: 3
+          value: "# include \"libft/libft.h\"\n"
+          when:
+            not-exists: "# include \"libft/libft.h\"\n"
