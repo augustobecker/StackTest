@@ -1,0 +1,8 @@
+type: app
+description: 'The Basics to a C Project with Tests using minunit.h
+  installed.'
+template: 42-C-Project/42-C-Project-template
+plugins:
+- plugin: 42-C-Project/norminette-plugin
+- plugin: 42-C-Project/minuit-tests-plugin
+
