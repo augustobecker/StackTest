@@ -14,12 +14,14 @@ technologies: # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/ya
 types:
   - app
 inputs:
+  - label: Project Name
+    type: text
+    name: project_name
+    default: project_name
+    global: true
   - label: URL to your libft
     type: text
     name: libft
-  # - label: Project Name
-  #   type: text
-  #   name: project_name
 
 hooks:
   - type: run

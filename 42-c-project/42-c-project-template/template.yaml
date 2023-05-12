@@ -1,5 +1,5 @@
 name: 42-c-project-template
-description: Template for the basic of a project (Makefile, the project main file and its header)
+description: Template for the basic of a project (Makefile, the project main file and its .h file)
 types:
   - app-template
 inputs:
@@ -8,3 +8,5 @@ inputs:
     name: project_name
     default: project-name
     global: true
+  - label:  Install Norminette
+    type: bool

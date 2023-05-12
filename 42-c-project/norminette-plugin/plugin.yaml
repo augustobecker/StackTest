@@ -1,7 +1,6 @@
-name: Norminette
+name: Norminette-plugin
 description: This plugin installs Norminette (a tool that analyzes your C source files for 42 coding-style violations)
-
-display-name: Norminette
+display-name: Norminette-plugin
 picture: plugin.png
 category: backend # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/plugin/#category
 compatibility:
@@ -14,5 +13,16 @@ technologies: # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/ya
   - "Api"
 types:
   - app
+inputs:
+  - label: Project Name
+    type: text
+    name: project_name
+    default: project_name
+    global: true
 
-command: python3 -m pip install --upgrade pip setuptools && python3 -m pip install norminette
+hooks:
+  - type: run
+    trigger: before-render
+    commands:
+      - python3 -m pip install --upgrade pip setuptools
+      - python3 -m pip install norminette

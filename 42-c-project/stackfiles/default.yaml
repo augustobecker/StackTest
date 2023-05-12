@@ -1,9 +1,17 @@
 type: app
-description: 42-c-project-template + mlx + libft for graphic projects
+description: "The Basics for a C Project: a Folder with the project name,\
+ a Makefile to compile the code, a subfolder for src files and include files,\
+ and Norminette installed."
 # template used to create the project
 template: 42-c-projects/42-c-project-template
 inputs:
-  some_input: value
+  - label: Install Norminette?
+  name: name
+  type: text
+  items:
+        - "Install Norminette"
+        - "Skip installation (not necessary)"
+  default: "Skip installation (not necessary)"
 # list of plugins to be applied after project creation
 plugins:
   - plugin: 42-c-projects/mlx-plugin

@@ -1,5 +1,5 @@
 name: mlx-plugin
-description: plugin to install mlx 
+description: plugin to install MiniLibx Graphical Library
 display-name: mlx-plugin
 picture: plugin.png
 category: backend # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/plugin/#category
@@ -15,6 +15,11 @@ technologies: # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/ya
 types:
   - app
 inputs:
+  - label: Project Name
+    type: text
+    name: project_name
+    default: project_name
+    global: true
   - label: Intra login
     type: text
     name: login
