@@ -1,0 +1,28 @@
+name: minunit-tests-plugin
+description: This plugin includes MinUnit, a minimal unit testing framework for C/C++ self-contained in a single header file, as weel as a Makefile and the basics to create some tests.
+display-name: minunit-tests-plugin
+picture: plugin.png
+category: backend # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/plugin/#category
+compatibility:
+  - C
+about: docs/about.md
+usage: docs/usage.md
+use-case: docs/use-case.md
+implementation: docs/implementation.md
+technologies: # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/yaml/#technologies
+  - "Api"
+types:
+  - app
+inputs:
+  - label: Project Name
+    type: text
+    name: project_name
+    default: project_name
+    global: true
+
+hooks:
+  - type: run
+    trigger: after-render
+    commands:
+      - git clone https://github.com/siu/minunit.git tests
+
