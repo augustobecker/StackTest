@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../includes/{{program_name}}.h"
+#include "../includes/{{project_name_for_plugin}}.h"
 
 MU_TEST(test_function_1_case_1)
 {

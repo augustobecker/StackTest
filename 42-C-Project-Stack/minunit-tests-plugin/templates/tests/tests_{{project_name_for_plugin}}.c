@@ -3,7 +3,6 @@
 
 #include "function_test.c"
 
-
 int main(void) 
 {
 	MU_RUN_SUITE(function_1_test_suite);

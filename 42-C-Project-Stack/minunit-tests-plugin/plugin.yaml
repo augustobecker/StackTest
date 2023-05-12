@@ -16,13 +16,4 @@ types:
 inputs:
   - label: Project Name
     type: text
-    name: project_name
-    default: project_name
-    global: true
-
-hooks:
-  - type: run
-    trigger: after-render
-    commands:
-      - git clone https://github.com/siu/minunit.git tests
-
+    name: project_name_for_plugin

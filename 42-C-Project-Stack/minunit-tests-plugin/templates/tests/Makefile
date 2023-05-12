@@ -1,8 +1,8 @@
-TESTFILE 	= tests_{{program_name | lower}}.c
-TESTPROGRAM = {{program_name | lower}}.tests
+TESTFILE 	= tests_{{project_name_for_plugin | lower}}.c
+TESTPROGRAM = {{project_name_for_plugin | lower}}.tests
 SRCDIR		= ../srcs/
 INCLUDE		= ../includes
-NAME		= ../{{program_name | lower}}
+NAME		= ../{{project_name_for_plugin | lower}}
 OBJS		= ${SRCS:.c=.o}
 
 test:		fclean
