@@ -1,0 +1,8 @@
+type: app
+description: The Basics for a C Graphical Project. Libft allowed. Install MiniLibx,
+  add a compilation flag to Makefile, and includes the library (mlx.h) in the .h file.
+template: 42-C-Project/42-C-Project-template
+plugins:
+- plugin: 42-C-Project/norminette-plugin
+- plugin: 42-C-Project/libft-plugin
+- plugin: 42-C-Project/mlx-plugin

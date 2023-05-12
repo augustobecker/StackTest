@@ -1,0 +1,11 @@
+name: 42-C-Project-template
+description: Template for the basic of a C project (a Makefile, the project main file and its .h)
+types:
+  - app-template
+inputs:
+  - label: Project name
+    type: text
+    name: project_name
+    default: project-name
+    global: true
+

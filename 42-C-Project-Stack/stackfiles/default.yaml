@@ -1,0 +1,7 @@
+type: app
+description: "The Basics for a C Project: a Folder with the project name, a Makefile
+  to compile the code, a subfolder for src files and include files and Norminette
+  installed."
+template: 42-C-Project/42-C-Project-template
+plugins:
+- plugin: 42-C-Project/norminette-plugin
